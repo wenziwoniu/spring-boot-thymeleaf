@@ -1,0 +1,6 @@
+info:
+  name: spring-boot-thymeleaf-test
+  contact: spring-boot-thymeleaf-test
+
+server:
+  port: 8002

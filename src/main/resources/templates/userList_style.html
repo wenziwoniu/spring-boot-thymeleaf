@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta content="text/html;charset=UTF-8" />
+<link th:href="@{bootstrap-3.3.5/css/bootstrap.min.css}" rel="stylesheet" />
+<link th:href="@{bootstrap-3.3.5/css/bootstrap-theme.min.css}" rel="stylesheet" />
+<title>userList_style</title>
+</head>
+<body>
+
+	<div style="width: 1000px;">
+		<table style="border-width: 1px; border-style: dashed;">
+			<tr>
+				<td>ID</td>
+				<td>登录名</td>
+				<td>用户名</td>
+				<td>电话</td>
+				<td>创建时间</td>
+				<td>详情</td>
+			</tr>
+			<div th:each="user:${users}">
+				<tr>
+					<td th:text="${user.id}"></td>
+					<td th:text="${user.loginName}"></td>
+					<td th:text="${user.userName}"></td>
+					<td th:text="${user.phone}"></td>
+					<td th:text="${#dates.format(user.createTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+					<td><a href="#" th:href="@{/index/detail(id=${user.id})}" target="_blank">详情</a></td>
+				</tr>
+			</div>
+		</table>
+	</div>
+</body>
+</html>

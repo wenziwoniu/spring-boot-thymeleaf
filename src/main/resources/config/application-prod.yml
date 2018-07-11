@@ -1,0 +1,6 @@
+info:
+  name: spring-boot-thymeleaf-prod
+  contact: spring-boot-thymeleaf-prod
+
+server:
+  port: 8003

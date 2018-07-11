@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>userList</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div>
+		<ul>
+			<li th:each="user:${users}">
+				用户名：<span th:text="${user.userName}">默认用户名</span>;
+				登录名：<span th:text="${user.userCode}"></span>;
+				注册日期：<span th:text="${#dates.format(user.createTime, 'yyyy-MM-dd HH:mm:ss')}"></span>;
+				<a href="#" th:href="@{/index/detail(id=${user.id})}" target="_blank">更多详情</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

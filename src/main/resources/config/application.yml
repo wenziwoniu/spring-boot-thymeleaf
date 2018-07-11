@@ -1,0 +1,24 @@
+info:
+  name: spring-boot-thymeleaf-default
+  contact: spring-boot-thymeleaf-default
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-boot-thymeleaf
+  profiles:
+    active: dev
+  thymeleaf:
+    mode: HTML5  #除了支持html外，还支持xml,js,css等
+    encoding: UTF-8
+    #模板文件路径前缀
+    prefix: classpath:/templates/
+    #模板文件后缀名
+    suffix: .html
+    content-type: text/html
+    cache: false
+
+logging:
+  config: classpath:config/log4j2.xml
